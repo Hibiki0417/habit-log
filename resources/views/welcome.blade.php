@@ -12,7 +12,7 @@
 
     <ul>
         @foreach ($habits as $habit)
-            <li>{{ $habit }}</li>
+            <li>{{ $habit->title }}</li>
         @endforeach
     </ul>
 

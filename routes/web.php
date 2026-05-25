@@ -1,13 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Habit;
 
 Route::get('/', function () {
-    $habits = [
-        'PHP学習',
-        '朝散歩',
-        '筋トレ',
-    ];
+    $habits = Habit::all();
 
     return view('welcome', [
         'habits' => $habits,
